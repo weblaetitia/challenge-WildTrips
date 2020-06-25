@@ -52,9 +52,15 @@ router.get('/delete-trip', function(req, res) {
 })
 
 // route vers new
-
 router.get('/new', function (req, res) {
   res.render('new')
 })
+// route vers new
+router.post('/add-trip', function (req, res) {
+  console.log(req.body)
+  travel.push(req.body)
+  res.render('trips', {travel:travel})
+})
+
 
 module.exports = router;

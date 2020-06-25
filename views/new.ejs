@@ -26,12 +26,18 @@
     <div class="row text-white">
       <row class="col-12">
         <h1 class="h2 mb-4 text-center">Add a new trip to the db</h1>
-        <form action="/new" method="POST" class="text-center">
-          <div class="form-group">
-            <label for="title">Trip title</label>
-            <input class="form-control" type="text" id="title" name="name">
+        <form action="/add-trip" method="POST" class="text-center">
+          <div class="form-row">
+            <div class="col">
+              <label for="title">Trip title</label>
+              <input class="form-control" type="text" id="title" name="name">
+            </div>
+              <div class="col">
+                <label for="url">Picture url</label>
+                <input class="form-control" type="text" id="url" name="image">
+              </div>
           </div>
-          <div class="form-group">
+          <div class="form-group mt-4">
             <label for="description">Type your description</label>
             <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
           </div>
