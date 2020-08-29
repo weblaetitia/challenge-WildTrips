@@ -1,17 +1,13 @@
 body {
-  margin:0;
   background: linear-gradient(to top, #9d50bb, #6e48aa);
-  min-height: 100vh;
-  width: 100vw;
-  padding-bottom: 50px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .jumbotron_image {
+  height: 90vh;
   background: url('/images/photo1.jpg'), rgba(0,0,0, 0.8);
   background-position: center center;
   background-size: cover;
-  height: 70vh;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -19,6 +15,11 @@ body {
   align-items: center;
   text-align: center;
   color: #FFFFFF;
+}
+
+nav, footer {
+  height: 5vh;
+  margin: 0;
 }
 
 

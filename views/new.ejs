@@ -8,46 +8,54 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-info">
-    <a class="navbar-brand" href="/">Wild trips</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="/">Home</a>
-        <a class="nav-item nav-link" href="/trips">Trips</a>
-        <a class="nav-item nav-link active" href="/new">Add new trip <span class="sr-only">(current)</span></a>
+
+  <div class="d-flex flex-column" style="min-height: 100vh;">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-info">
+      <a class="navbar-brand" href="/">Wild trips</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/trips">Trips</a>
+          <a class="nav-item nav-link active" href="/new">Add new trip <span class="sr-only">(current)</span></a>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container container_display">
+      <div class="row text-white">
+        <row class="col-12">
+          <h1 class="h2 mb-4 text-center">Add a new trip to the db</h1>
+          <form action="/add-trip" method="POST" class="text-center">
+            <div class="form-row">
+              <div class="col">
+                <label for="title">Trip title</label>
+                <input class="form-control" type="text" id="title" name="name">
+              </div>
+                <div class="col">
+                  <label for="url">Picture url</label>
+                  <input class="form-control" type="text" id="url" name="image">
+                </div>
+            </div>
+            <div class="form-group mt-4">
+              <label for="description">Type your description</label>
+              <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+  
+        </form>
+        </row>
       </div>
     </div>
-  </nav>
-
-  <div class="container container_display">
-    <div class="row text-white">
-      <row class="col-12">
-        <h1 class="h2 mb-4 text-center">Add a new trip to the db</h1>
-        <form action="/add-trip" method="POST" class="text-center">
-          <div class="form-row">
-            <div class="col">
-              <label for="title">Trip title</label>
-              <input class="form-control" type="text" id="title" name="name">
-            </div>
-              <div class="col">
-                <label for="url">Picture url</label>
-                <input class="form-control" type="text" id="url" name="image">
-              </div>
-          </div>
-          <div class="form-group mt-4">
-            <label for="description">Type your description</label>
-            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-
-      </form>
-      </row>
-    </div>
+  
+    <footer class="bg-info mt-auto d-flex flex-column justify-content-center">
+      <p class="text-center m-0 text-white">NodeJS + Express challenge by <a href="https://github.com/weblaetitia">weblaetitia</a> @lacapsule.academy - june 2020</p>
+    </footer>
+    
   </div>
-
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
