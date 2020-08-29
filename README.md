@@ -1,7 +1,7 @@
 # Challenge! "Wild trips"
 https://dashboard.heroku.com/apps/wild-trips
 
-Week2 NodeJS + Express challenge @lacapsule.academy
+Week 3 NodeJS + Express challenge @lacapsule.academy
 
 ## Techno used
 - Bootstrap
